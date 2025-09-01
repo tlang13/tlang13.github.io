@@ -87,7 +87,7 @@ section {
 }
 
 .content-section {
-    width: 350px;
+    width: 300px;
     height: fit-content;
     margin: 2rem auto;
     background-color: var(--card-color);
