@@ -1,4 +1,4 @@
-const navLinks = document.querySelectorAll('.nav-button');
+const navLinks = document.querySelectorAll('.section-button');
 const sections = document.querySelectorAll('.content-section');
 
 function showSection(id) {
@@ -19,3 +19,5 @@ navLinks.forEach(link => {
         showSection(targetId);
     });
 });
+
+showSection('about');

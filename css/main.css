@@ -1,15 +1,9 @@
 :root {
-    --primary-color: #0d47a1;
+    --background-color: #131313;
+    --card-color: #0d47a1;
     --secondary-color: #1976d2;
-    --background-color: #e3f2fd;
     --accent-color: #64b5f6;
     --text-color: #e3f2fd;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background-color: #131313;
-    }
 }
 
 html, body {
@@ -25,8 +19,7 @@ body {
 }
 
 header {
-    background: var(--primary-color);
-    color: var(--light-color);
+    background: var(--card-color);
     padding: 20px;
     text-align: center;
 }
@@ -38,8 +31,17 @@ header {
     background-color: var(--primary-color);
 }
 
-.intro {
-    text-align: center;
+.contact-buttons {
+    display: flex;
+    padding-top: 1rem;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-icon {
+    width: 25px;
+    height: 25px;
 }
 
 .logo {
@@ -52,17 +54,7 @@ h1 {
     font-size: 30px;
 }
 
-.intro {
-    max-width: 600px;
-    margin: 2rem auto;
-    padding: 1.5rem 2rem;
-    background-color: var(--background-color);
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.nav-buttons {
+.section-buttons {
     display: flex;
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
@@ -71,12 +63,13 @@ h1 {
     flex-wrap: wrap;
 }
 
-.nav-button {
+.section-button {
+    margin-top: 2rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    background-color: var(--light-color);
-    color: var(--primary-color);
+    background-color: var(--card-color);
+    color: var(--text-color);
     text-decoration: none;
     padding: 0.6rem 0.6rem;
     border-radius: 8px;
@@ -84,8 +77,8 @@ h1 {
     font-size: 16px;
 }
 
-.nav-button.active {
-    background-color: var(--highlight-color);
+.section-button.active {
+    background-color: var(--secondary-color);
 }
 
 section {
@@ -94,14 +87,17 @@ section {
 }
 
 .content-section {
-    background-color: var(--background-color);
+    width: 350px;
+    height: fit-content;
+    margin: 2rem auto;
+    background-color: var(--card-color);
+    border-radius: 12px;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
     transition: opacity 0.5s ease;
     position: absolute;
     text-align: center;
-    flex: 1;
 }
 
 .content-section.active {
@@ -111,27 +107,9 @@ section {
     position: relative;
 }
 
-h2 {
+.section-title {
+    font-size: 25px;
+    font-weight: bold;
     color: var(--primary-color);
     text-align: center;
-}
-
-footer {
-    text-align: center;
-    background: var(--primary-color);
-    color: var(--light-color);
-    font-size: 14px;
-}
-
-.contact-buttons {
-    display: flex;
-    padding-top: 1.5rem;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-.contact-icon {
-    width: 25px;
-    height: 25px;
 }
