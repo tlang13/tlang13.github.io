@@ -1,8 +1,0 @@
-Origin: Nebbs' Repo (Nyxian)
-Label: Nebbs' Repo (Nyxian)
-Suite: stable
-Version: 1.0
-Codename: ios
-Architectures: iphoneos-arm iphoneos-arm64 iphoneos-arm64e
-Components: main
-Description: Collection of working tweaks/themes for Procursus Jailed.
